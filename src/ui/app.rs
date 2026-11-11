@@ -276,7 +276,7 @@ impl FaroApp {
             if notifier.enabled {
                 painter.circle_filled(center, 4.0, dot_color);
             } else {
-                painter.circle_stroke(center, 4.0, Stroke::new(1.3, dot_color));
+                painter.circle_stroke(center, 4.0, Stroke::new(1.3_f32, dot_color));
             }
         };
 
@@ -285,7 +285,7 @@ impl FaroApp {
             painter.circle_stroke(
                 pos2(rect.left() + theme::SIDEBAR_COMPACT / 2.0, rect.bottom() - 36.0),
                 9.0,
-                Stroke::new(1.0, Color32::from_white_alpha(unit(0.25 * alpha * opacity))),
+                Stroke::new(1.0_f32, Color32::from_white_alpha(unit(0.25 * alpha * opacity))),
             );
             if alpha > 0.5 {
                 dot(pos2(rect.left() + theme::SIDEBAR_COMPACT / 2.0, rect.bottom() - 36.0));

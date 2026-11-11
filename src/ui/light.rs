@@ -111,7 +111,7 @@ impl Light {
             painter.circle_stroke(
                 self.pointer,
                 5.0 + (1.0 - pulse) * 28.0,
-                Stroke::new(1.2, Color32::from_white_alpha(unit(0.5 * pulse * presence))),
+                Stroke::new(1.2_f32, Color32::from_white_alpha(unit(0.5 * pulse * presence))),
             );
         }
     }

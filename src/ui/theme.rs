@@ -59,8 +59,8 @@ fn visuals() -> Visuals {
     visuals.extreme_bg_color = Color32::TRANSPARENT;
     visuals.window_rounding = Rounding::same(RADIUS_CARD);
     visuals.selection.bg_fill = Color32::from_white_alpha(52);
-    visuals.selection.stroke = Stroke::new(1.0, TEXT_PRIMARY);
-    visuals.text_cursor.stroke = Stroke::new(1.6, Color32::WHITE);
+    visuals.selection.stroke = Stroke::new(1.0_f32, TEXT_PRIMARY);
+    visuals.text_cursor.stroke = Stroke::new(1.6_f32, Color32::WHITE);
     visuals.interact_cursor = Some(CursorIcon::PointingHand);
     for widget in [
         &mut visuals.widgets.noninteractive,

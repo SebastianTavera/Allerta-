@@ -141,7 +141,7 @@ fn warning(pen: &Pen<'_>) {
 /// Logotipo: un faro visto desde arriba — anillos y un núcleo de luz.
 pub fn logo(painter: &Painter, center: Pos2, size: f32, opacity: f32) {
     painter.add(radial(center, size * 1.3, |t| luminance(0.0, 0.22 * opacity * falloff(t), 1.0)));
-    painter.circle_stroke(center, size * 0.5, Stroke::new(1.4, Color32::from_white_alpha(unit(0.55 * opacity))));
-    painter.circle_stroke(center, size * 0.3, Stroke::new(1.2, Color32::from_white_alpha(unit(0.3 * opacity))));
+    painter.circle_stroke(center, size * 0.5, Stroke::new(1.4_f32, Color32::from_white_alpha(unit(0.55 * opacity))));
+    painter.circle_stroke(center, size * 0.3, Stroke::new(1.2_f32, Color32::from_white_alpha(unit(0.3 * opacity))));
     painter.circle_filled(center, size * 0.15, Color32::from_white_alpha(unit(0.95 * opacity)));
 }
